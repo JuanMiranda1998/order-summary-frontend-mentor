@@ -1,0 +1,153 @@
+:root{
+  --clr-pale-blue: hsl(225, 100%, 94%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+  --clr-lavender: hsl(245, 80%, 75%);
+  --clr-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-desatured-blue: hsl(224, 23%, 55%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  
+  --ff-base:'Red Hat Display', sans-serif;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+*,*::before,*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p{
+  overflow-wrap: break-word;
+}
+h1,h2,h3{
+  line-height: 1;
+}
+img,svg{
+  display: block;
+  width: 100%;
+}
+body{
+  width: 100%;
+  min-height: 100vh;
+  background: var(--clr-pale-blue);
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-medium);
+  color: var(--clr-desatured-blue);
+}
+@media (min-width:600px){
+  body{
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-position: 0 -9rem;
+  }
+}
+.card{
+  max-width: 22rem;
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: var(--clr-white);
+  box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.card_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+.card_title{
+  font-size: 1.35rem;
+  color: var(--clr-dark-blue);
+  font-weight: var(--fw-black);
+}
+.card_text{
+  font-size: 0.925rem;
+  line-height: 1.5rem;
+  text-align: center;
+  padding: 0 2rem;
+}
+.card_plan{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  width: 90%;
+  border-radius: 15px;
+  background-color: var(--clr-very-pale-blue);
+}
+.plan_icon{
+  width: 40px;
+}
+.plan_info{
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.plan_title{
+  font-size: 0.925rem;
+  font-weight: var(--fw-black);
+  color: var(--clr-dark-blue);
+}
+.plan_price{
+  font-size: 0.925rem;
+}
+.plan_button{
+  font-size: 0.85rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-bright-blue);
+  text-decoration: underline;
+}
+.plan_button:is(:hover,:focus){
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-lavender);
+  transition: all ease-in 200ms;
+}
+.card_button{
+  display: block;
+  width: 90%;
+  border-radius: 10px;
+  padding: 0.75rem;
+  border: none;
+  font-size: 0.925rem;
+  font-weight: var(--fw-black);
+  font-family: inherit;
+}
+.accept{
+  cursor: pointer;
+  background-color: var(--clr-bright-blue);
+  color: var(--clr-white);
+}
+.reject{
+  cursor: pointer;
+  background-color: var(--clr-white);
+  color: var(--clr-desatured-blue);
+}
+.accept:is(:hover,:focus){
+  background-color: var(--clr-lavender);
+  transition: all ease-in 200ms;
+}
+.reject:is(:hover,:focus){
+  color: var(--clr-dark-blue);
+  transition: all ease-in 200ms;
+}
+.flex-group{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
