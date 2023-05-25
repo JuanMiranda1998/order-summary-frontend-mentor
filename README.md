@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/JuanMiranda1998/order-summary-frontend-mentor]
-
+- Live Site URL: [https://juanmiranda1998-order-summary.netlify.app/]
 
 ### Built with
 
